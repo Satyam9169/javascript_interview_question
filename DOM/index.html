@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- This is the first class of DOM -->
+  <!-- <div class="container">
+    <h1>Hello Satyam </h1>
+  </div>
+  <div class="box">First Box</div>
+  <div class="box">Second Box</div>
+  <div class="box">Third Box</div> -->
+  <!-- Second class of DOM -->
+  <!-- <div id="mypara" name="hello">
+    This is first div
+  </div>
+  <p class="para">This is paragraph</p> -->
+  <!-- Third class of dom -->
+  <!-- <p class="para">This is paragraph....</p> -->
+
+
+  <!-- <button id="btn">click me</button>
+  <div class="box">BOX</div> -->
+
+  <!-- EVENT HANDLER -->
+  <!-- <button id="mode">change mode</button> -->
+
+  <!-- This is the first example
+  <h2>DOM OBJECT MODEL</h2>
+  <p>Finding the Element by TagName, className</p>
+  <p>This example is demonstrate by tagName, className</p>
+  <p id="demo"></p> -->
+
+  <!-- 2nd Example -->
+  <!-- <h2>DOM OBJECT MODEL</h2>
+  <div id="main">
+    <p>Finding HTML Elements by Tag Name</p>
+    <p>This example demonstrates the <b>getElementsByTagName</b> method.</p>
+    <p id="demo"></p>
+  </div> -->
+
+  <!-- 3rd Example -->
+  <p>Finding HTML Elements by Query Selector</p>
+  <p class="intro">Hello World!.</p>
+  <p class="intro">This example demonstrates the <b>querySelectorAll</b> method.</p>
+  <p id="demo"></p>
+  
+
+</body>
+<!-- <script src="script.js"></script> -->
+<script>
+  /* first example
+  const element = document.getElementsByTagName('p');
+  document.getElementById('demo').innerHTML = 'This is the way to finding the content using tagName and (index-0)'
+   + element[0].innerHTML;
+  */
+
+  /*
+  const x = document.getElementById("main");
+  const y = x.getElementsByTagName("p");
+
+  document.getElementById("demo").innerHTML = 
+  'The first paragraph inside[0] index is: ' + y[0].innerHTML;
+  */
+
+// using querySelector
+
+const x = document.querySelectorAll("p.intro");
+document.getElementById('demo').innerHTML = 'The first Paragraph index-0 with class="intro" is: ' + x[0].innerHTML;
+document.getElementById('demo').innerHTML = document.body.innerHTML
+</script>
+
+</html>
