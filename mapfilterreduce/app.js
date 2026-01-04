@@ -59,93 +59,40 @@
 
 // *****Reduce*****
 // const num = [1,2,3,4]; for understanding
-// Array.prototype.myReduce = function(callback, initialValue){
-//     let accumulator = initialValue;
-//     for(let i = 0; i < this.length; i++){
-//         accumulator = accumulator ? callback(accumulator, this[i], i, this) : this[i];
-//     }
-//     return accumulator;
-// accumulator => initialValue
-// this[i] => currentValue
-// i => index
-// this => actual array mean(num)
-// }
+Array.prototype.myReduce = function (callback, initialValue) {
+    let accumulator = initialValue;
+    for (let i = 0; i < this.length; i++) {
+        accumulator = accumulator ? callback(accumulator, this[i], i, this) : this[i];
+    }
+    return accumulator;
+    // accumulator => initialValue
+    // this[i] => currentValue
+    // i => index
+    // this => actual array mean(num)
+}
 
 
-// const num = [1,2,3,4];
-// const sum = num.myReduce((accumulator, currVal, index, array)=>{
-//     return accumulator + currVal
-// },0)
-// console.log(sum);
+const num = [1, 2, 3, 4];
+const sum = num.myReduce((accumulator, currVal, index, array) => {
+    return accumulator + currVal
+}, 0)
+console.log(sum);
 
 
 // Q6 - print the total marks of the students with marks greater than 60 after 20 marks
 // has been added to those students who scored less than 60.
-let students = [
-    { name: "Piyush", rollNumber: 31, marks: 80 },
-    { name: "Jenny", rollNumber: 15, marks: 69 },
-    { name: "Kaushal", rollNumber: 16, marks: 35 },
-    { name: "Dilpreet", rollNumber: 7, marks: 55 },
-];
+// let students = [
+//     { name: "Piyush", rollNumber: 31, marks: 80 },
+//     { name: "Jenny", rollNumber: 15, marks: 69 },
+//     { name: "Kaushal", rollNumber: 16, marks: 35 },
+//     { name: "Dilpreet", rollNumber: 7, marks: 55 },
+// ];
 
-const result = students.map(student => {
-    if (student.marks < 60) {
-        student.marks += 20;
-    }
-    return student;
-}).filter(student => student.marks > 60).reduce((acc, curr) => acc + curr.marks, 0);
+// const result = students.map(student => {
+//     if (student.marks < 60) {
+//         student.marks += 20;
+//     }
+//     return student;
+// }).filter(student => student.marks > 60).reduce((acc, curr) => acc + curr.marks, 0);
 
-console.log(result);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// console.log(result);
