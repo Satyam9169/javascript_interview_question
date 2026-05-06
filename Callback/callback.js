@@ -27,14 +27,16 @@
 
 // example
 
-// function attachEventListerns(){
-//     let count = 0;
-//     document.getElementById("btn").addEventListener('click', ()=>{
-//         console.log('button clicked', ++count);
-//     })
-// }
+function attachEventListerns(){
+    let count = 0;
+    document.getElementById("btn").addEventListener('click', ()=>{
+        console.log('button clicked', ++count);
+    })
+}
 
-// attachEventListerns()
+attachEventListerns()
+//Reason => In the above code, the function `attachEventListerns` is defined to attach a click event listener to a button with the id "btn". When the button is clicked, it will log the message "button clicked" along with the count of how many times the button has been clicked. The count is incremented each time the button is clicked. This demonstrates the use of a callback function in an event listener.
+// besause it's a forms of closure, the inner function (the callback) has access to the variables of the outer function (attachEventListerns), which allows it to maintain the state of the count variable across multiple clicks.
 
 // 2nd example
 // const calculation = (a, b, operation) => {

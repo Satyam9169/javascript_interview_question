@@ -1,30 +1,126 @@
-// map =>
+/*
+ Map => The map() method in JavaScript creates a new array by applying a callback
+ function to each element of the original array.
+    
+  1. Internal Working of map()
+  When you use map():
+  JavaScript creates a NEW empty array
+  It loops through each item
+  Takes returned value
+  Pushes returned value into new array
+  Returns final array
 
-// const num = [1,2,3,4];
-// const multiply = num.map((currentElement, index, actualArray) => {
-//    return currentElement * 2 + index
-// })
-// actualArray => num
-// console.log(multiply);
+1) Iterates through every element of the array.
+2) Executes the callback function for each element.
+3) Stores the returned value in the new array.
+4) Map (Transformation):=> Maps an array of length $N$ to a new array of length $N$.
+   It applies a transformation function to every element.
 
-// filter => it added conditional statement if true it push in array
-// if false not push in array
-// const num = [1,2,3,4];
-// const filterData = num.filter((value)=>{
-//     return value > 2
-// })
-// console.log(filterData);
 
-// reduce
-// const num = [1,2,3,4];
-// const sum = num.reduce((accumulator, currVal, index, array)=>{
-//     return accumulator + currVal
-// },0)
-// console.log(sum);
-// accumulator => initialValue of the array
-// currVal => current Value from the array
-// index => index of the array
-// array => actual array mean (num)
+| Feature                 | map()                        | forEach()            |
+| ----------------------- | ---------------------------- | -------------------- |
+| Returns value?          | Yes                          | No                   |
+| Return type             | New array                    | undefined            |
+| Main purpose            | Transform data               | Execute side effects |
+| Chainable               | Yes                          | No                   |
+| Functional programming  | Yes                          | No                   |
+| Memory usage            | More                         | Less                 |
+| Immutable approach      | Preferred                    | Not ideal            |
+| Used in React rendering | Very common                  | Rare                 |
+| Can break loop?         | No                           | No                   |
+| Async support           | Better with Promise handling | Weak                 |
+
+
+2. What is forEach() in JavaScript?
+
+forEach() is also an array iteration method, but its purpose is different.
+
+It is mainly used to:
+
+Execute some operation
+Perform side effects
+Log data
+Update UI
+Modify external variables
+
+It does NOT return a new array.
+*/
+
+//Example - 1
+/*
+const num = [1,2,3,4];
+const multiply = num.map((currentElement, index, actualArray) => {
+   return currentElement * 2 + index
+})
+actualArray => num
+console.log(multiply);
+*/
+
+/*
+Filter => it added conditional statement if true it push in array
+if false not push in array
+    => The filter() method in JavaScript creates a new array containing
+       only the elements that satisfy a condition defined in a callback function.
+       
+    1) Iterates over each element of the array
+    2) Includes elements when the callback returns true
+    3) Excludes elements when the callback returns false
+*/
+
+// Example - 2
+/*
+const num = [1,2,3,4];
+const filterData = num.filter((value)=>{
+    return value > 2
+})
+console.log(filterData);
+*/
+
+
+/* Reduce
+ => The reduce() in JavaScript is used to combine all elements of an array into a single value by
+    applying a callback function to each element.
+
+1) Accumulator: stores the result after each iteration
+2) currentValue: the current element being processed
+3) currentIndex: index of the current element
+
+Description
+The reduce() method executes a reducer function for array element.
+The reduce() method returns a single value: the function's accumulated result.
+The reduce() method does not execute the function for empty array elements.
+The reduce() method does not change the original array.
+*/
+
+/* Example=> 3
+   const num = [1,2,3,4];
+   const sum = num.reduce((accumulator, currVal, index, array)=>{
+    return accumulator + currVal
+   },0)
+   console.log(sum);
+
+*/
+
+
+/*
+| Feature     | map         | filter      | reduce              |
+| ----------- | ----------- | ----------- | ------------------- |
+| Purpose     | Transform   | Select      | Aggregate           |
+| Output size | Same        | ≤ Same      | Single value        |
+| Return type | Array       | Array       | Anything            |
+| Use case    | Modify data | Remove data | Calculate / combine |
+
+*/
+
+/*
+accumulator => initialValue of the array
+currVal => current Value from the array
+index => index of the array
+array => actual array mean (num)
+*/
+
+
+
 
 // *****Polyfill for map******
 // Array.prototype.myMap = function(callback){
