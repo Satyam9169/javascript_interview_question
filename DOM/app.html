@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom Manipulation</title>
+</head>
+<style>
+    * {
+        padding: 0px;
+        margin: 0px;
+    }
+
+    h3 {
+        color: brown;
+        background-color: aquamarine;
+        text-align: center;
+    }
+
+    h1 {
+        color: chocolate;
+        text-align: center;
+    }
+
+    p {
+        width: 90%;
+        margin: auto;
+        color: whitesmoke;
+        background-color: blueviolet;
+        line-height: 55px;
+    }
+
+    .task1 {
+        border: 1px solid black;
+        width: 90%;
+        margin: auto;
+    }
+
+    .outer {
+        position: relative;
+        left: 50%;
+        top: 50%;
+        width: 100px;
+        height: 100px;
+        border: 1px solid black;
+        background-color: blue;
+    }
+
+    .inner {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 85px;
+        height: 85px;
+        border: 1px solid black;
+        background-color: yellow;
+        transform: translate(-50%, -50%);
+    }
+
+    .bom {
+        width: 90%;
+        margin: auto;
+        border: 1px solid black;
+        text-align: center;
+    }
+</style>
+
+<body>
+    <h3>Hello, DOM Manipulation</h3>
+    <h1>Document Object Model (DOM)</h1><br />
+    <p>
+        The <strong> Document Object Model (DOM) </strong> connects web pages to scripts or programming languages by
+        representing the
+        structure of a document—such as the HTML representing a web page—in memory. Usually it refers to JavaScript,
+        even though modeling HTML, SVG, or XML documents as objects are not part of the core JavaScript language.
+    </p>
+    <p>
+        The DOM represents a document with a logical tree. Each branch of the tree ends in a node, and each node
+        contains objects. DOM methods allow programmatic access to the tree. With them, you can change the document's
+        structure, style, or content.
+    </p><br /><br />
+
+    <div class="task1">
+        <span>Task 1: Light On & Off</span><br /><br />
+        <div class="outer">
+            <div class="inner"></div>
+        </div>
+        <button class="onButtoon">On/Off</button>
+        <!-- <button class="offButtoon">OFF</button> -->
+    </div><br />
+
+    <div class="bom">
+        <h1>BOM=> Browser Object Model</h1>
+        <p id="heading"></p>
+        <div id="container">
+            Hello World
+            <!-- This is a comment -->
+            <p>This is a paragraph.</p>
+        </div>
+    </div><br /><br />
+
+    <div id="box">
+        <p id="old">Old Paragraph</p>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

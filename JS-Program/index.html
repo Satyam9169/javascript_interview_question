@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+</head>
+<body>
+    <h1>Javascript Practice with example</h1>
+    <div id="students">Your data is</div>
+    <button id="myButton">Submit</button>
+    <!-- <script src="closure.js"></script> -->
+    <!-- <script src="Array.js"></script> -->
+    <!-- <script src="HOC.js"></script> -->
+    <!-- <script src="promises.js"></script> -->
+    <script src="Object.js"></script>
+
+</body>
+<script>
+    // this the example of closures
+    function onClickHanler(){
+        var count = 0;
+        return function(){
+            console.log("Button clicked " + ++count + " times");
+        }
+    }
+    var buttonClicked = onClickHanler()
+    document.getElementById('myButton').addEventListener('click', buttonClicked);
+</script>
+</html>

@@ -1,0 +1,43 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    background-color: aqua;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 598px;
+}
+
+.container h3{
+    margin-top: 50px;
+}
+
+
+.inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 400px;
+    height: 400px;
+    background-color: aliceblue;
+}
+
+.btn{
+    width: 70px;
+    height: 30px;
+    background-color: rgb(13, 122, 86);
+    color: wheat;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.allbtn{
+    margin-top: 100px;
+}

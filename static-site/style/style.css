@@ -1,0 +1,302 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Navbar section  */
+
+.navbar-brand img {
+    max-height: 3.125rem;
+    margin-right: 1.25rem;
+}
+
+.hero-section {
+    background: url('../images/Home1.jpg') no-repeat center center/cover;
+    height: 100vh;
+    position: relative;
+    z-index: -1;
+}
+
+.navbar {
+    background: rgba(0, 0, 0, 0.7);
+    /* Semi-transparent background */
+}
+
+.nav-link {
+    color: #fff !important;
+    /* Ensure the nav links are white for visibility */
+}
+
+@media (max-width: 991.98px) {
+    .navbar {
+        background: rgba(0, 0, 0, 0.9);
+        /* Darker background for mobile */
+    }
+
+    .navbar-collapse {
+        background: rgba(0, 0, 0, 0.9);
+        /* Ensure the collapse menu also has a dark background */
+    }
+}
+
+/* Services section */
+.card {
+    position: relative;
+    overflow: hidden;
+}
+
+.card-img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.card-img-overlay {
+    background: rgba(88, 78, 78, 0.5);
+    color: #fff;
+    padding: 20px;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 575.98px) {
+    #services .col-12 {
+        margin-bottom: 1rem;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+    #services .col-sm-6 {
+        margin-bottom: 1rem;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    #services .col-md-4 {
+        margin-bottom: 1.5rem;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    #services .col-lg-4 {
+        margin-bottom: 2rem;
+    }
+}
+
+@media (min-width: 1200px) and (max-width: 1399.98px) {
+    #services .col-xl-4 {
+        margin-bottom: 2.5rem;
+    }
+}
+
+@media (min-width: 1400px) {
+    #services .col-xxl-4 {
+        margin-bottom: 3rem;
+    }
+}
+
+
+/* about-us section */
+
+.line {
+    width: 4.688rem;
+    height: 0.25rem;
+    background-color: orange;
+    margin-bottom: 1rem;
+    /* Adding some space below the line */
+}
+
+
+@media (max-width: 767.98px) {
+    #aboutus .col-md-6 {
+        margin-bottom: 2rem;
+        /* Adds space between columns on smaller screens */
+    }
+}
+
+/* Optional: Customize the button to ensure consistent padding */
+.btn-outline-warning {
+    padding: 0.5rem 1.5rem;
+    /* Adjusts padding for better button appearance */
+}
+
+
+/* Personal Training */
+
+.personal-training img {
+    width: 100%;
+    height: auto;
+    /* Ensures the image maintains its aspect ratio */
+}
+
+
+/* our workout gallery */
+.card {
+    position: relative;
+    overflow: hidden;
+}
+
+.card-img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.upperline {
+    width: 4.688rem;
+    height: 0.25rem;
+    background-color: orange;
+    /* Adjust as needed */
+    margin-bottom: 1rem;
+    align-items: center;
+}
+
+@media (max-width: 575.98px) {
+    .our-workout-gallery .col-12 {
+        margin-bottom: 1rem;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .our-workout-gallery .col-sm-6 {
+        margin-bottom: 1rem;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .our-workout-gallery .col-md-4 {
+        margin-bottom: 1.5rem;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .our-workout-gallery .col-lg-4 {
+        margin-bottom: 2rem;
+    }
+}
+
+@media (min-width: 1200px) and (max-width: 1399.98px) {
+    .our-workout-gallery .col-xl-4 {
+        margin-bottom: 2.5rem;
+    }
+}
+
+@media (min-width: 1400px) {
+    .our-workout-gallery .col-xxl-4 {
+        margin-bottom: 3rem;
+    }
+}
+
+
+/* Marchandise section */
+
+.card {
+    position: relative;
+    overflow: hidden;
+}
+
+.card-img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.upperline {
+    width: 4.688rem;
+    height: 0.25rem;
+    background-color: orange;
+    /* Adjust as needed */
+    margin-bottom: 1rem;
+}
+
+@media (max-width: 575.98px) {
+    .merchandise .col-12 {
+        margin-bottom: 1rem;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .merchandise .col-sm-6 {
+        margin-bottom: 1rem;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .merchandise .col-md-3 {
+        margin-bottom: 1.5rem;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .merchandise .col-lg-3 {
+        margin-bottom: 2rem;
+    }
+}
+
+@media (min-width: 1200px) and (max-width: 1399.98px) {
+    .merchandise .col-xl-3 {
+        margin-bottom: 2.5rem;
+    }
+}
+
+@media (min-width: 1400px) {
+    .merchandise .col-xxl-3 {
+        margin-bottom: 3rem;
+    }
+}
+
+
+/* footer-section */
+.bi-telephone-fill,
+.bi-geo-alt-fill,
+.bi-envelope-fill {
+    display: inline-block;
+    padding: 3px;
+    background-color: #ffc107;
+    /* Bootstrap warning color */
+    color: #343a40;
+    /* Bootstrap dark text color */
+    border-radius: 50%;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+.upperline1 {
+    width: 4.688rem;
+    height: 0.25rem;
+    margin-bottom: 1rem;
+    align-items: center;
+}
+
+.social-icons i {
+    font-size: 1.5rem;
+    margin-right: 1rem;
+    color: #fff;
+}
+
+/* Additional media queries for responsive adjustments */
+@media (max-width: 575.98px) {
+    .footer .col-12 {
+        margin-bottom: 2rem;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .footer .col-12 {
+        margin-bottom: 2rem;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .footer .col-md-3 {
+        margin-bottom: 2rem;
+    }
+}

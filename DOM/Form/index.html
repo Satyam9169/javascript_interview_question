@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form usng DOM</title>
+</head>
+
+<body>
+    <h1>FORM USING DOM</h1>
+    <!-- <p>Finding HTML element using <b>document.form</b></p>
+    <form id="frm1">
+        First Name: <input type="text" name="f_Name" value="satyam"><br>
+        Last Name: <input type="text" name="l_Name" value="agrahari"><br><br>
+        <input type="submit" value="submit">
+    </form>
+    <p id="demo"></p> -->
+
+    <!-- <form name="myForm" onsubmit="return ValidateForm()">
+        Name: <input type="text" name="f_Name">
+        <input type="submit" value="submit">
+    </form> -->
+    <div id="newList" data="createList">
+        <ul id="originalList">
+            <li>First</li>
+            <li>Second</li>
+            <li>Third</li>
+            <li>Fourth</li>
+            <li>Fifth</li>
+        </ul>
+    </div>
+    <h2>JavaScript Validation</h2>
+    <p>Please input a number between 1 and 10:</p>
+    <input id="numb">
+    <button type="button" onclick="myFunction()">Submit</button>
+    <p id="demo"></p>
+</body>
+<script>
+    // first example
+    // const x = document.forms["frm1"];
+    // let text = "";
+    // for(let i = 0; i < x.length; i++){
+    //     text += x.elements[i].value + "<br>"
+    // }
+    // document.getElementById("demo").innerHTML = text
+
+    // const ValidateForm = () => {
+    //     let x = document.forms["myForm"]["f_Name"].value;
+    //     if (x === "") {
+    //         alert("Name must be filled out");
+    //         return false;
+    //     }
+    // }
+
+    // const myFunction = () => {
+    //     let x = document.getElementById("numb").value;
+    //     let text;
+    //     if (isNaN(x) || x < 1 || x > 10) {
+    //         text = "Input is not ok";
+    //     } else {
+    //         text = "Input OK"
+    //     }
+    //     document.getElementById("demo").innerHTML = text;
+    // }
+    // const newDiv = document.createElement('div');
+    // const newText = document.createTextNode('Hello HTML !!')
+    // newDiv.appendChild(newText);
+    // document.body.appendChild(newText);
+
+    const newDiv = document.createElement('div');
+    const newText = document.createTextNode('Hello HTML !!');
+    newDiv.appendChild(newText);
+
+    // Append the new div to the element with id 'newList'
+    const newList = document.getElementById('newList');
+    newList.appendChild(newDiv);
+
+    const originalList = document.getElementById('originalList');
+    const clonedList = originalList.cloneNode(true); // Clone the entire list
+    document.getElementById('newList').appendChild(clonedList);
+
+
+</script>
+
+</html>
