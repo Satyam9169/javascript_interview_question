@@ -2,23 +2,23 @@
 
 // Question 1 : Currying
 
-// function f(a) {
-//     return (b) => {
-//         return "Works"
-//     }
-// }
-// console.log(f(1)(2));
+function f(a) {
+  return (b) => {
+    return "Works"
+  }
+}
+console.log(f(1)(2));
 
 // Question 2 : sum(2)(6)(1)
 
-// function sum(a) {
-//     return (b) => {
-//         return (c) => {
-//             return a + b + c
-//         }
-//     }
-// }
-// console.log(sum(1)(2)(3)) // 6
+function sum(a) {
+  return (b) => {
+    return (c) => {
+      return a + b + c
+    }
+  }
+}
+console.log(sum(1)(2)(3)) // 6
 
 // 4 : Write a currying fn
 //       evaluate("sum")(4)(2)
@@ -45,13 +45,13 @@
 
 // Question 5 : Infinite Currying -> sum(1)(2)(3)....(n)
 
-// function add(a) {
-//     return function (b) {
-//         if (b) return add(a + b);
-//         return a;
-//     };
-// }
-// console.log(add(5)(2)(4)(8)())
+function add(a) {
+  return function (b) {
+    if (b) return add(a + b);
+    return a;
+  };
+}
+console.log(add(5)(2)(4)(8)())
 
 // Question 6 : currying vs partial application
 
@@ -104,22 +104,22 @@
 
 // another example of the currying
 
-// function curry(func) {
-//     return function curried(...args) {
-//         if (args.length >= func.length) {
-//             return func(...args);
-//         } else {
-//             return function (...nextArgs) {
-//                 return curried(...args, ...nextArgs);
-//             }
-//         }
-//     }
-// }
+function curry(func) {
+  return function curried(...args) {
+    if (args.length >= func.length) {
+      return func(...args);
+    } else {
+      return function (...nextArgs) {
+        return curried(...args, ...nextArgs);
+      }
+    }
+  }
+}
 
-// const sum = (a, b, c, d) => a + b + c + d;
+const sum = (a, b, c, d) => a + b + c + d;
 
-// const result = curry(sum);
-// console.log(result(2)(4)(5)(7))
+const result = curry(sum);
+console.log(result(2)(4)(5)(7)())
 
 // whenever we passed the argument in result((2)(4)(5)(7)()) -> 1st it will go in curry function
 // when it will get in curry function then -> it will perform 2 action first-> it will save sum of all number
